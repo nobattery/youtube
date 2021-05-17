@@ -14,7 +14,7 @@ function App() {
     //Warning ! Youtube API Key을 다른 사람이 사용시 과금이 발생할 수 있다.
     //query 부분은 입력값으로 변경
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyAiwoVC130ScwuVVz-MppNA0SdTLPLV3a0`,
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=mykey`,
       requestOptions
     )
       .then((response) => response.json())
@@ -30,7 +30,7 @@ function App() {
     //Warning ! Youtube API Key을 다른 사람이 사용시 과금이 발생할 수 있다.
     //git 올릴 때 마다 key 확인!
     fetch(
-      "https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyAiwoVC130ScwuVVz-MppNA0SdTLPLV3a0",
+      "https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=mykey",
       requestOptions
     )
       .then((response) => response.json()) //text -> json : 시각적인 이유
