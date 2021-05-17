@@ -3,6 +3,7 @@ import "./App.css";
 import VideoList from "./components/video_list/video_list";
 
 function App() {
+  //useState(초기값) : 초기값 선언 주의! 에러 발생 가능
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -12,6 +13,7 @@ function App() {
       redirect: "follow",
     };
     //Warning ! Youtube API Key을 다른 사람이 사용시 과금이 발생할 수 있다.
+    //git 올릴 때 마다 key 확인!
     fetch(
       "https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=MyKey",
       requestOptions
