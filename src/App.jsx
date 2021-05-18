@@ -3,7 +3,7 @@ import styles from "./App.module.css";
 import SearchHeader from "./components/search_header/search_header";
 import VideoList from "./components/video_list/video_list";
 
-//! 문제점 ! 조회에 필요한 Key가 소스상에서 보이고, 조회 처리를 App안해서 해주고있다. 개선할 예정!
+//! 문제점 ! 조회에 필요한 Key가 소스상에서 보이고, 조회 처리를 App안에서 해주고있다. 개선할 예정!
 function App() {
   //useState(초기값) : 초기값 선언 주의! 에러 발생 가능
   const [videos, setVideos] = useState([]);
