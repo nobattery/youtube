@@ -15,7 +15,6 @@ const SearchHeader = ({ onSearch }) => {
     if (event.key === "Enter") {
       handleSearch();
     }
-    console.log("onkeypress");
   };
   return (
     <header className={styles.header}>
