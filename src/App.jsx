@@ -17,7 +17,11 @@ function App({ youtube }) {
   const search = (query) => {
     youtube
       .search(query) //
-      .then((videos) => setVideos(videos));
+      .then((videos) => {
+        setVideos(videos);
+        //Videos가 검색됐다면 다시 null로 지정(다시 video 검색하면 목록으로 이동하기 위함)
+        setSelectedVideo(null);
+      });
   };
   useEffect(() => {
     youtube
