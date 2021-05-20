@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "./App.module.css";
 import SearchHeader from "./components/search_header/search_header";
 import VideoDetail from "./components/video_detail/video_detail";
@@ -14,20 +14,26 @@ function App({ youtube }) {
   const selectVideo = (video) => {
     setSelectedVideo(video);
   };
-  const search = (query) => {
-    youtube
-      .search(query) //
-      .then((videos) => {
-        setVideos(videos);
-        //Videos가 검색됐다면 다시 null로 지정(다시 video 검색하면 목록으로 이동하기 위함)
-        setSelectedVideo(null);
-      });
-  };
+
+  //Header Re-render를 방지하기위해 useCallback 사용.
+  //메모리에 영향을 주기 때문에 usecallback 사용주의! 자식 컴포넌트에 props를 전달할 때 위주로 사용.
+  const search = useCallback(
+    (query) => {
+      youtube
+        .search(query) //
+        .then((videos) => {
+          setVideos(videos);
+          //Videos가 검색됐다면 다시 null로 지정(다시 video 검색하면 목록으로 이동하기 위함)
+          setSelectedVideo(null);
+        });
+    },
+    [youtube]
+  );
   useEffect(() => {
     youtube
       .mostPopular() //
       .then((videos) => setVideos(videos));
-  }, []);
+  }, [youtube]);
 
   return (
     <div className={styles.app}>
