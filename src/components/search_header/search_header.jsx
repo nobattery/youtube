@@ -1,13 +1,23 @@
 import React, { memo, useRef } from "react";
 import styles from "./search_header.module.css";
 
-const SearchHeader = memo(({ onSearch }) => {
+//<img className={styles.image} src="/images/logo.png" alt="logo" />
+const SearchHeader = memo(({ onSearch, mostPopular }) => {
   // ! useRef -> <input> ref = {} 꼭 정의해주기 !
   const inputRef = useRef();
   const handleSearch = () => {
     const value = inputRef.current.value;
-    onSearch(value);
+    if (value !== "") {
+      onSearch(value);
+    } else {
+      mostPopular();
+    }
   };
+
+  const onHomeClick = () => {
+    handleSearch();
+  };
+
   const onClick = () => {
     handleSearch();
   };
@@ -19,7 +29,9 @@ const SearchHeader = memo(({ onSearch }) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img className={styles.image} src="/images/logo.png" alt="logo" />
+        <button className={styles.icon} onClick={onHomeClick}>
+          <i className="fab fa-youtube"></i>
+        </button>
         <h1 className={styles.title}>Youtube</h1>
       </div>
       <input

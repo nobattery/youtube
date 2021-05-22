@@ -29,6 +29,12 @@ function App({ youtube }) {
     },
     [youtube]
   );
+  const mostPopular = () => {
+    youtube
+      .mostPopular() //
+      .then((videos) => setVideos(videos));
+    setSelectedVideo(null);
+  };
   useEffect(() => {
     youtube
       .mostPopular() //
@@ -37,7 +43,7 @@ function App({ youtube }) {
 
   return (
     <div className={styles.app}>
-      <SearchHeader onSearch={search} />
+      <SearchHeader onSearch={search} mostPopular={mostPopular} />
       <section className={styles.content}>
         {/**SelectedVideo가 있다면 div를 보여주고, SideVideo가 한줄에 하나씩 나오도록 해준다.*/}
         {selectedVideo && (
