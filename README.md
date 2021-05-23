@@ -29,3 +29,7 @@ Youtube APIs
 ## Details
 ![detailpage](https://user-images.githubusercontent.com/17999694/119259510-9e360500-bc09-11eb-89a9-72f32e073af7.png)
 선택한 Video, Title, ChannelTitle, description을 표시하고, 우측에는 이전 인기 Video list를 표시한다.
+
+## 주의 사항
+Youtube Data API는 하루 최대 사용량이 정해져있다. 초과하면 페이지가 보이지 않으니 주의.
+
