@@ -18,7 +18,7 @@ Youtube APIs
 - VideoList : VideoItem에 key, video, onClick 상태, display 상태(list,grid)를 전달한다.
 - VideoItem : display 상태에 맞게 표시하고, video, thumbnail, title, channelTitle을 표시한다.
 - VideoDetail : [Youtube IFrame](https://developers.google.com/youtube/youtube_player_demo)을 이용하여 VieoDetail(type,width,height,src,framebroder,allowfullscreen 등)을 설정한다.
-- Youtube : fetch or axios를 이용하여 API와 연결. 사용할 API의 파라미터를 설정하고, 응답 결과를 리턴한다. 단, 연결에 사용하는 API Key는 .env파일에 따로 작성(보안 이슈). 
+- Youtube : fetch or axios를 이용하여 API와 연결. 사용할 API의 파라미터를 설정하고, 응답 결과를 리턴한다. 단, 연결에 사용하는 API Key는 .env파일에 따로 작성(보안 이슈). Dependency Injection을 위해 네트워크 통신부분을 따로 이 곳에 생성했다. 
 
 각 컴포넌트 별 모듈화된 CSS(PostCSS)로 관리
 
