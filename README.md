@@ -21,3 +21,7 @@ Youtube APIs
 - Youtube : fetch or axios를 이용하여 API와 연결. 사용할 API의 파라미터를 설정하고, 응답 결과를 리턴한다. 단, 연결에 사용하는 API Key는 .env파일에 따로 작성(보안 이슈). 
 
 각 컴포넌트 별 모듈화된 CSS(PostCSS)로 관리
+
+## Search 
+![search](https://user-images.githubusercontent.com/17999694/119259295-86aa4c80-bc08-11eb-8a32-0f556a049af0.png)
+검색어에 해당하는 영상의 thumbnail, title, channelTitle의 list를 보여준다.
