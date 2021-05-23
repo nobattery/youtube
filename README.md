@@ -30,6 +30,12 @@ Youtube APIs
 ![detailpage](https://user-images.githubusercontent.com/17999694/119259510-9e360500-bc09-11eb-89a9-72f32e073af7.png)
 선택한 Video, Title, ChannelTitle, description을 표시하고, 우측에는 이전 인기 Video list를 표시한다.
 
+## PostMan
+![postman](https://user-images.githubusercontent.com/17999694/119259773-cffb9b80-bc0a-11eb-8bb6-574fdb70be35.png)
+PostMan을 활용하여 API별 통신 테스트, Response 확인, Request Code를 확인 할 수 있다. 
+
 ## 주의 사항
 Youtube Data API는 하루 최대 사용량이 정해져있다. 초과하면 페이지가 보이지 않으니 주의.
+
+
 
