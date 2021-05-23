@@ -25,3 +25,7 @@ Youtube APIs
 ## Search 
 ![search](https://user-images.githubusercontent.com/17999694/119259295-86aa4c80-bc08-11eb-8a32-0f556a049af0.png)
 검색어에 해당하는 영상의 thumbnail, title, channelTitle의 list를 보여준다.
+
+## Details
+![detailpage](https://user-images.githubusercontent.com/17999694/119259510-9e360500-bc09-11eb-89a9-72f32e073af7.png)
+선택한 Video, Title, ChannelTitle, description을 표시하고, 우측에는 이전 인기 Video list를 표시한다.
